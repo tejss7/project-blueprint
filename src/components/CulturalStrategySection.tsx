@@ -54,7 +54,11 @@ export const CulturalStrategySection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="cinematic-card p-6 rounded-sm"
+                whileHover={{ 
+                  x: 10,
+                  scale: 1.02,
+                }}
+                className="cinematic-card p-6 rounded-sm spotlight-effect cursor-pointer"
               >
                 <p className="text-neon-aqua font-light tracking-wide">{offering}</p>
               </motion.div>
@@ -78,9 +82,13 @@ export const CulturalStrategySection = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
+                whileHover={{ 
+                  scale: 1.05,
+                  y: -5,
+                }}
                 className="flex items-center gap-4"
               >
-                <div className="cinematic-card px-12 py-8 rounded-sm">
+                <div className="cinematic-card px-12 py-8 rounded-sm glow-pulse spotlight-effect">
                   <span className="text-2xl md:text-3xl font-light text-neon-aqua tracking-wider">
                     {step}
                   </span>

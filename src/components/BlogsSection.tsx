@@ -42,8 +42,12 @@ export const BlogsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.15 }}
-              whileHover={{ y: -8 }}
-              className="cinematic-card p-10 rounded-sm cursor-pointer group"
+              whileHover={{ 
+                y: -10,
+                scale: 1.02,
+                rotateX: 2,
+              }}
+              className="cinematic-card p-10 rounded-sm cursor-pointer group spotlight-effect shine-hover"
             >
               <div className="mb-6">
                 <span className="text-xs text-neon-aqua/60 tracking-widest font-light">

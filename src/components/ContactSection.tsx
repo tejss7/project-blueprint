@@ -56,7 +56,11 @@ export const ContactSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="cinematic-card p-8 rounded-sm"
+                whileHover={{ 
+                  scale: 1.03,
+                  x: 5,
+                }}
+                className="cinematic-card p-8 rounded-sm spotlight-effect"
               >
                 <h3 className="text-neon-aqua/80 font-light mb-3 tracking-wider text-sm">
                   {info.label}
@@ -73,7 +77,7 @@ export const ContactSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="cinematic-card p-10 rounded-sm"
+            className="cinematic-card p-10 rounded-sm glass-morphism"
           >
             <form className="space-y-6">
               <div>
@@ -106,7 +110,7 @@ export const ContactSection = () => {
               </div>
               <Button 
                 type="submit"
-                className="w-full bg-transparent border border-neon-aqua/40 text-neon-aqua hover:bg-neon-aqua/10 hover:border-neon-aqua/60 font-light text-lg py-6 tracking-wider transition-all duration-500"
+                className="w-full bg-transparent border border-neon-aqua/40 text-neon-aqua hover:bg-neon-aqua/10 hover:border-neon-aqua/60 font-light text-lg py-6 tracking-wider transition-all duration-500 ripple-effect cursor-magnetic glow-pulse"
               >
                 Send Message →
               </Button>

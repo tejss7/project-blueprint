@@ -63,7 +63,11 @@ export const ServicescapesSection = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.08 }}
-              className="cinematic-card p-10 md:p-12 rounded-sm"
+              whileHover={{ 
+                x: 8,
+                scale: 1.01,
+              }}
+              className="cinematic-card p-10 md:p-12 rounded-sm spotlight-effect cursor-pointer"
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
                 <h3 className="text-2xl md:text-3xl font-light text-neon-aqua tracking-wide">

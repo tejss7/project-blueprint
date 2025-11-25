@@ -55,7 +55,15 @@ export const IdentitySection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="cinematic-card p-10 md:p-12 rounded-sm"
+              whileHover={{ 
+                scale: 1.02,
+                rotateX: 2,
+                rotateY: 2,
+              }}
+              className="cinematic-card p-10 md:p-12 rounded-sm floating spotlight-effect parallax-tilt"
+              style={{ 
+                animationDelay: `${index * 0.5}s`,
+              }}
             >
               <h3 className="text-xl md:text-2xl font-light text-neon-aqua mb-6 tracking-wide">
                 {card.title}

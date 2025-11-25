@@ -55,8 +55,12 @@ export const ReviewsSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               onClick={() => setSelectedReview(selectedReview === index ? null : index)}
-              whileHover={{ y: -5 }}
-              className="cinematic-card p-8 rounded-sm cursor-pointer text-center soft-glow"
+              whileHover={{ 
+                y: -8,
+                scale: 1.05,
+                rotateZ: 2,
+              }}
+              className="cinematic-card p-8 rounded-sm cursor-pointer text-center soft-glow cursor-magnetic ripple-effect"
             >
               <span className="text-lg font-light text-neon-aqua tracking-wider">
                 {review.brand}

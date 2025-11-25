@@ -43,7 +43,11 @@ export const AddressesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="cinematic-card p-10 rounded-sm text-center"
+              whileHover={{ 
+                scale: 1.03,
+                y: -5,
+              }}
+              className="cinematic-card p-10 rounded-sm text-center spotlight-effect"
             >
               <h3 className="text-2xl font-light text-neon-aqua mb-4 tracking-wide">
                 {location.city}

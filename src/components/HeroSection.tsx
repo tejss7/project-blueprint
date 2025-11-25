@@ -18,8 +18,25 @@ export const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-void-black py-32 px-8">
-      {/* Subtle gradient fade */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-neon-aqua/5 to-transparent opacity-30" />
+      {/* Multi-layer parallax gradient */}
+      <motion.div 
+        className="absolute inset-0 bg-gradient-to-b from-transparent via-neon-aqua/5 to-transparent opacity-30"
+        style={{ y: 0 }}
+        animate={{ y: [0, 50, 0] }}
+        transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div 
+        className="absolute inset-0 bg-gradient-to-tr from-ultramarine/5 via-transparent to-transparent opacity-20"
+        style={{ y: 0 }}
+        animate={{ y: [0, -30, 0] }}
+        transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div 
+        className="absolute inset-0 bg-gradient-to-bl from-transparent via-transparent to-neon-aqua/5 opacity-25"
+        style={{ y: 0 }}
+        animate={{ y: [0, 40, 0] }}
+        transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+      />
       
       {/* Soft light streaks */}
       <div className="absolute inset-0 overflow-hidden">
@@ -111,7 +128,7 @@ export const HeroSection = () => {
           >
             <Button
               size="lg"
-              className="bg-transparent border border-neon-aqua/40 text-neon-aqua hover:bg-neon-aqua/10 hover:border-neon-aqua/60 font-light text-lg px-12 py-7 tracking-wider transition-all duration-500"
+              className="bg-transparent border border-neon-aqua/40 text-neon-aqua hover:bg-neon-aqua/10 hover:border-neon-aqua/60 font-light text-lg px-12 py-7 tracking-wider transition-all duration-500 ripple-effect cursor-magnetic glow-pulse"
             >
               START YOUR JOURNEY →
             </Button>

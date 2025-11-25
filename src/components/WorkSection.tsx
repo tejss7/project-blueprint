@@ -86,8 +86,12 @@ export const WorkSection = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
+              whileHover={{ 
+                scale: 1.03,
+                rotateZ: selectedCategory === index ? 0 : 1,
+              }}
               onClick={() => setSelectedCategory(selectedCategory === index ? null : index)}
-              className="cinematic-card p-12 rounded-sm cursor-pointer min-h-[300px] flex flex-col justify-center"
+              className="cinematic-card p-12 rounded-sm cursor-pointer min-h-[300px] flex flex-col justify-center spotlight-effect cursor-magnetic"
             >
               <h3 className="text-2xl md:text-3xl font-light text-neon-aqua mb-8 tracking-wide">
                 {category.title}

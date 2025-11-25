@@ -23,9 +23,10 @@ export const AkarsaOneSection = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1.5 }}
+          whileHover={{ scale: 1.1, rotate: 180 }}
         >
           <motion.div
-            className="absolute inset-0 rounded-full bg-neon-aqua/10 blur-2xl"
+            className="absolute inset-0 rounded-full bg-neon-aqua/10 blur-2xl glow-pulse"
             animate={{
               scale: [1, 1.2, 1],
               opacity: [0.3, 0.5, 0.3],
@@ -36,8 +37,16 @@ export const AkarsaOneSection = () => {
               ease: "easeInOut"
             }}
           />
-          <div className="absolute inset-0 rounded-full border border-neon-aqua/40" />
-          <div className="absolute inset-4 rounded-full border border-neon-aqua/20" />
+          <motion.div 
+            className="absolute inset-0 rounded-full border border-neon-aqua/40"
+            animate={{ rotate: 360 }}
+            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          />
+          <motion.div 
+            className="absolute inset-4 rounded-full border border-neon-aqua/20"
+            animate={{ rotate: -360 }}
+            transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+          />
         </motion.div>
 
         <motion.div

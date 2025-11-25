@@ -34,8 +34,12 @@ export const TeamSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              whileHover={{ y: -5 }}
-              className="cinematic-card p-12 rounded-sm text-center group"
+              whileHover={{ 
+                y: -8,
+                scale: 1.02,
+                rotateY: 2,
+              }}
+              className="cinematic-card p-12 rounded-sm text-center group spotlight-effect parallax-tilt"
             >
               <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-br from-neon-aqua/10 to-ultramarine/10 flex items-center justify-center border border-neon-aqua/30">
                 <span className="text-4xl font-light text-neon-aqua">

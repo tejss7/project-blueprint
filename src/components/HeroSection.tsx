@@ -18,6 +18,20 @@ export const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-void-black py-32 px-8">
+      {/* Full-screen background video */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover opacity-30"
+        >
+          <source src="https://cdn.pixabay.com/video/2022/11/07/137866-768947088_large.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-void-black/50 via-transparent to-void-black/80" />
+      </div>
+
       {/* Multi-layer parallax gradient */}
       <motion.div 
         className="absolute inset-0 bg-gradient-to-b from-transparent via-neon-aqua/5 to-transparent opacity-30"
@@ -81,7 +95,12 @@ export const HeroSection = () => {
         ))}
       </div>
 
-      <div className="relative z-10 text-center max-w-6xl mx-auto space-y-16">
+      <motion.div 
+        className="relative z-10 text-center max-w-6xl mx-auto space-y-16"
+        style={{ y: 0 }}
+        animate={{ y: [0, -20, 0] }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+      >
         {/* Phase 1 - Opening line */}
         {phase >= 1 && (
           <motion.p
@@ -134,7 +153,7 @@ export const HeroSection = () => {
             </Button>
           </motion.div>
         )}
-      </div>
+      </motion.div>
     </section>
   );
 };

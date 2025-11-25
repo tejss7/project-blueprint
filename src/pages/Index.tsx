@@ -7,7 +7,7 @@ import { AkarsaOneSection } from "@/components/AkarsaOneSection";
 import { CulturalStrategySection } from "@/components/CulturalStrategySection";
 import { ActOfGivingSection } from "@/components/ActOfGivingSection";
 import { ReviewsSection } from "@/components/ReviewsSection";
-import { BlogsSection } from "@/components/BlogsSection";
+import { CaseStudiesSection } from "@/components/CaseStudiesSection";
 import { CareersSection } from "@/components/CareersSection";
 import { AddressesSection } from "@/components/AddressesSection";
 import { ContactSection } from "@/components/ContactSection";
@@ -41,7 +41,7 @@ const Index = () => {
       <GlowDivider />
       <ReviewsSection />
       <GlowDivider />
-      <BlogsSection />
+      <CaseStudiesSection />
       <GlowDivider />
       <CareersSection />
       <GlowDivider />
